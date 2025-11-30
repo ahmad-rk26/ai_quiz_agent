@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Quiz Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      min-height: 100vh;
+      color: white;
+    }
+
+    /* Glow animation */
+    .glow-box {
+      box-shadow: 0 0 50px rgba(99,102,241,0.4);
+      animation: pulseGlow 3s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 30px rgba(99,102,241,0.4); }
+      50% { box-shadow: 0 0 60px rgba(168,85,247,0.7); }
+      100% { box-shadow: 0 0 30px rgba(99,102,241,0.4); }
+    }
+
+    /* Subtle floating animation */
+    .float {
+      animation: floatAnim 4s ease-in-out infinite;
+    }
+
+    @keyframes floatAnim {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ✅ Navbar -->
+<nav class="w-full bg-transparent backdrop-blur-lg py-5 px-10 flex justify-between items-center border-b border-white/10">
+  <h1 class="text-2xl font-bold tracking-wide text-indigo-400">AI Quiz Agent</h1>
+
+  <div>
+    <a href="/" class="text-gray-300 hover:text-indigo-400 px-4">Home</a>
+    <a href="/about" class="text-gray-300 hover:text-indigo-400 px-4">About</a>
+    <a href="/contact" class="text-gray-300 hover:text-indigo-400 px-4">Contact</a>
+  </div>
+</nav>
+
+<!-- Center Area -->
+<div class="flex justify-center items-center mt-20 px-4">
+
+  <div class="glow-box float bg-white/10 border border-white/20 rounded-2xl p-10 max-w-xl w-full">
+
+    <h2 class="text-center text-3xl font-bold mb-6 text-indigo-300">
+      Upload File & Generate Quiz
+    </h2>
+
+    <!-- Upload Form -->
+    <form action="/generate" method="post" enctype="multipart/form-data" class="space-y-5">
+
+      <!-- File Upload -->
+      <div class="flex flex-col">
+        <label class="text-sm mb-2 text-gray-300">Select File (PDF / DOCX / Image / TXT)</label>
+        <input type="file" name="file" required 
+               class="p-3 rounded-lg border border-gray-600 bg-black/20 text-gray-200 cursor-pointer">
+      </div>
+
+      <!-- Number Input -->
+      <div class="flex flex-col">
+        <label class="text-sm mb-2 text-gray-300">Number of MCQs</label>
+        <input type="number" name="num_questions" min="1" max="50" value="5"
+               class="p-3 rounded-lg border border-gray-600 bg-black/20 text-gray-200">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" 
+              class="w-full py-3 text-lg font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 transition-all duration-300 shadow-lg hover:shadow-indigo-600/50">
+        Generate Quiz
+      </button>
+    </form>
+
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="mt-20 text-center text-gray-400 py-6 border-t border-white/10">
+  <p>© 2025 AI Quiz Agent • Powered by Ahmad Raza Khan</p>
+</footer>
+
+</body>
+</html>

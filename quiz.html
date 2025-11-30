@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 6px 0;
+            cursor: pointer;
+            background: #f0f0f0;
+            transition: 0.3s;
+        }
+
+        label:hover {
+            background: #e2e2e2;
+        }
+
+        .correct {
+            background-color: #b0ffb0 !important;
+        }
+
+        .incorrect {
+            background-color: #ffb0b0 !important;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #0056c7;
+        }
+
+        @media(max-width: 600px){
+            .question-box {
+                padding: 15px;
+            }
+            label {
+                padding: 8px;
+            }
+            button {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form id="quizForm">
+        
+            <div class="question-box">
+                <p><strong>Question 1:</strong> What does the letter 'A' primarily stand for in the MEAN acronym?</p>
+                <label><input type="radio" name="q0" value="A"> AngularJS (or Angular)</label><label><input type="radio" name="q0" value="B"> Apache HTTP Server</label><label><input type="radio" name="q0" value="C"> Amazon Web Services</label><label><input type="radio" name="q0" value="D"> Asynchronous JavaScript</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 2:</strong> Which component is replaced by React.js in the variation of the stack known as MERN?</p>
+                <label><input type="radio" name="q1" value="A"> MongoDB</label><label><input type="radio" name="q1" value="B"> Express.js</label><label><input type="radio" name="q1" value="C"> Angular</label><label><input type="radio" name="q1" value="D"> Node.js</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 3:</strong> The primary advantage mentioned for writing applications using the MEAN stack is that all components support programs written in which language?</p>
+                <label><input type="radio" name="q2" value="A"> Python</label><label><input type="radio" name="q2" value="B"> Java</label><label><input type="radio" name="q2" value="C"> JavaScript</label><label><input type="radio" name="q2" value="D"> C++</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 4:</strong> Who is credited with coining the acronym MEAN?</p>
+                <label><input type="radio" name="q3" value="A"> Valeri Karpov</label><label><input type="radio" name="q3" value="B"> Austin Anderson</label><label><input type="radio" name="q3" value="C"> Elon Musk</label><label><input type="radio" name="q3" value="D"> Brendan Eich</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 5:</strong> In comparison to stacks like LAMP, what key layer is explicitly noted as not being included in the MEAN stack components?</p>
+                <label><input type="radio" name="q4" value="A"> A database layer</label><label><input type="radio" name="q4" value="B"> A server-side scripting layer</label><label><input type="radio" name="q4" value="C"> An operating system layer</label><label><input type="radio" name="q4" value="D"> A web application presentation layer</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 6:</strong> What front-end technology is used in the MEVN variation of the stack?</p>
+                <label><input type="radio" name="q5" value="A"> React.js</label><label><input type="radio" name="q5" value="B"> Vue.js</label><label><input type="radio" name="q5" value="C"> jQuery</label><label><input type="radio" name="q5" value="D"> AngularJS</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 7:</strong> In what year did Valeri Karpov introduce the term MEAN in a blog post?</p>
+                <label><input type="radio" name="q6" value="A"> 2010</label><label><input type="radio" name="q6" value="B"> 2013</label><label><input type="radio" name="q6" value="C"> 2015</label><label><input type="radio" name="q6" value="D"> 2018</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 8:</strong> The MEAN stack is described as a software stack for building dynamic web sites and what else?</p>
+                <label><input type="radio" name="q7" value="A"> Mobile operating systems</label><label><input type="radio" name="q7" value="B"> Desktop software</label><label><input type="radio" name="q7" value="C"> Web applications</label><label><input type="radio" name="q7" value="D"> Embedded systems</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 9:</strong> Who initially created the logo concept for the original MEAN stack LinkedIn group?</p>
+                <label><input type="radio" name="q8" value="A"> Austin Anderson</label><label><input type="radio" name="q8" value="B"> Valeri Karpov</label><label><input type="radio" name="q8" value="C"> The founders of MongoDB</label><label><input type="radio" name="q8" value="D"> The Node.js community</label>
+            </div>
+            
+            <div class="question-box">
+                <p><strong>Question 10:</strong> How are the components of the MEAN stack described in relation to stacks like LAMP, based on the text?</p>
+                <label><input type="radio" name="q9" value="A"> Lower-level</label><label><input type="radio" name="q9" value="B"> Proprietary</label><label><input type="radio" name="q9" value="C"> Higher-level</label><label><input type="radio" name="q9" value="D"> Purely back-end</label>
+            </div>
+            
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+<script>
+    const mcqs = [{"question": "What does the letter 'A' primarily stand for in the MEAN acronym?", "options": ["AngularJS (or Angular)", "Apache HTTP Server", "Amazon Web Services", "Asynchronous JavaScript"], "correct": "A", "explanation": "MEAN stands for MongoDB, Express.js, AngularJS (or Angular), and Node.js, according to the text."}, {"question": "Which component is replaced by React.js in the variation of the stack known as MERN?", "options": ["MongoDB", "Express.js", "Angular", "Node.js"], "correct": "C", "explanation": "A variation known as MERN replaces Angular with React.js front-end."}, {"question": "The primary advantage mentioned for writing applications using the MEAN stack is that all components support programs written in which language?", "options": ["Python", "Java", "JavaScript", "C++"], "correct": "C", "explanation": "Because all components of the MEAN stack support programs that are written in JavaScript, MEAN applications can be written in one language for both server-side and client-side execution environments."}, {"question": "Who is credited with coining the acronym MEAN?", "options": ["Valeri Karpov", "Austin Anderson", "Elon Musk", "Brendan Eich"], "correct": "A", "explanation": "The acronym MEAN was coined by Valeri Karpov."}, {"question": "In comparison to stacks like LAMP, what key layer is explicitly noted as not being included in the MEAN stack components?", "options": ["A database layer", "A server-side scripting layer", "An operating system layer", "A web application presentation layer"], "correct": "C", "explanation": "The components of the MEAN stack are higher-level including a web application presentation layer and not including an operating system layer."}, {"question": "What front-end technology is used in the MEVN variation of the stack?", "options": ["React.js", "Vue.js", "jQuery", "AngularJS"], "correct": "B", "explanation": "A variation named MEVN use Vue.js as front-end."}, {"question": "In what year did Valeri Karpov introduce the term MEAN in a blog post?", "options": ["2010", "2013", "2015", "2018"], "correct": "B", "explanation": "He introduced the term in a 2013 blog post."}, {"question": "The MEAN stack is described as a software stack for building dynamic web sites and what else?", "options": ["Mobile operating systems", "Desktop software", "Web applications", "Embedded systems"], "correct": "C", "explanation": "MEAN is a source-available JavaScript software stack for building dynamic web sites and web applications."}, {"question": "Who initially created the logo concept for the original MEAN stack LinkedIn group?", "options": ["Austin Anderson", "Valeri Karpov", "The founders of MongoDB", "The Node.js community"], "correct": "A", "explanation": "The logo concept was initially created by Austin Anderson for the original MEAN stack LinkedIn group."}, {"question": "How are the components of the MEAN stack described in relation to stacks like LAMP, based on the text?", "options": ["Lower-level", "Proprietary", "Higher-level", "Purely back-end"], "correct": "C", "explanation": "The components of the MEAN stack are higher-level including a web application presentation layer."}];
+
+    function checkAnswers() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+
+        mcqs.forEach((mcq, i) => {
+            const selected = form.querySelector(`input[name="q${i}"]:checked`);
+            const options = form.querySelectorAll(`input[name="q${i}"]`);
+
+            options.forEach(opt => {
+                const parent = opt.parentElement;
+
+                if (opt.value === mcq.correct) {
+                    parent.classList.add("correct");
+                }
+
+                if (selected && opt === selected && opt.value !== mcq.correct) {
+                    parent.classList.add("incorrect");
+                }
+            });
+
+            if (selected && selected.value === mcq.correct) {
+                score++;
+            }
+        });
+
+        alert(`Your Score: ${score}/${mcqs.length}`);
+    }
+</script>
+
+</body>
+</html>

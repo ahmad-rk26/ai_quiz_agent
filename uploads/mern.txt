@@ -1,0 +1,7 @@
+MEAN (MongoDB, Express.js, AngularJS (or Angular), and Node.js)[1] is a source-available JavaScript software stack for building dynamic web sites and web applications.[2] A variation known as MERN replaces Angular with React.js front-end,[3][4] and another named MEVN use Vue.js as front-end.
+
+Because all components of the MEAN stack support programs that are written in JavaScript, MEAN applications can be written in one language for both server-side and client-side execution environments.
+
+Though often compared directly to other popular web development stacks such as the LAMP stack, the components of the MEAN stack are higher-level including a web application presentation layer and not including an operating system layer.[5]
+
+The acronym MEAN was coined by Valeri Karpov.[6] He introduced the term in a 2013 blog post and the logo concept, initially created by Austin Anderson for the original MEAN stack LinkedIn group, is an assembly of the first letter of each component of the MEAN acronym.[7]
