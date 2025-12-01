@@ -1,11 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>About • AI Quiz Agent</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
+  <style>
     body {
       font-family: "Poppins", sans-serif;
       background: radial-gradient(circle at top, #0f172a, #020617);
@@ -15,14 +16,22 @@
 
     /* Glow animation */
     .glow-box {
-      box-shadow: 0 0 50px rgba(99,102,241,0.4);
+      box-shadow: 0 0 50px rgba(99, 102, 241, 0.4);
       animation: pulseGlow 3s infinite ease-in-out;
     }
 
     @keyframes pulseGlow {
-      0% { box-shadow: 0 0 30px rgba(99,102,241,0.4); }
-      50% { box-shadow: 0 0 60px rgba(168,85,247,0.7); }
-      100% { box-shadow: 0 0 30px rgba(99,102,241,0.4); }
+      0% {
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 60px rgba(168, 85, 247, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+      }
     }
 
     /* Subtle floating animation */
@@ -31,43 +40,101 @@
     }
 
     @keyframes floatAnim {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Founder glow animation */
+    @keyframes founderGlow {
+      0% {
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), 0 0 50px rgba(168, 85, 247, 0.4);
+        transform: translateY(0);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.9), 0 0 80px rgba(99, 102, 241, 0.9);
+        transform: translateY(-8px);
+      }
+
+      100% {
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), 0 0 50px rgba(168, 85, 247, 0.4);
+        transform: translateY(0);
+      }
+    }
+
+    .animate-founderGlow {
+      animation: founderGlow 3.5s infinite ease-in-out;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
-<nav class="w-full bg-transparent backdrop-blur-lg py-5 px-10 flex justify-between items-center border-b border-white/10">
-  <h1 class="text-2xl font-bold tracking-wide text-indigo-400">AI Quiz Agent</h1>
+  <nav
+    class="w-full bg-transparent backdrop-blur-lg py-5 px-10 flex justify-between items-center border-b border-white/10">
+    <h1 class="text-2xl font-bold tracking-wide text-indigo-400">AI Quiz Agent</h1>
 
-  <div>
-    <a href="/" class="text-gray-300 hover:text-indigo-400 px-4">Home</a>
-    <a href="/about" class="text-gray-300 hover:text-indigo-400 px-4">About</a>
-    <a href="/contact" class="text-gray-300 hover:text-indigo-400 px-4">Contact</a>
-  </div>
-</nav>
+    <div>
+      <a href="/" class="text-gray-300 hover:text-indigo-400 px-4">Home</a>
+      <a href="/about" class="text-gray-300 hover:text-indigo-400 px-4">About</a>
+      <a href="/contact" class="text-gray-300 hover:text-indigo-400 px-4">Contact</a>
+    </div>
+  </nav>
+
 
   <!-- About Content -->
   <section class="flex-grow flex justify-center items-center py-20 px-4">
-    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-10 max-w-2xl w-full shadow-lg shadow-indigo-500/50 glow-card float-card animate-fadeIn">
-      <h2 class="text-3xl font-bold text-indigo-300 mb-6 text-center">About AI Quiz Generator</h2>
-      <p class="text-white/90 mb-4 text-lg leading-relaxed">
-        The AI Quiz Generator automatically extracts text from your files and generates high-quality multiple-choice questions with correct and incorrect options.
-      </p>
-      <p class="text-white/90 mb-4 text-lg leading-relaxed">
-        This project is designed by <b>Ahmad Raza Khan</b> with a focus on a modern UI, smooth animations, and a learning-friendly experience.
-      </p>
-      <p class="text-white/90 text-lg leading-relaxed">
-        Our mission is to make learning interactive and easy using AI-powered tools.
-      </p>
+    <div
+      class="bg-white/10 backdrop-blur-md rounded-2xl p-10 max-w-4xl w-full shadow-lg shadow-indigo-500/50 glow-card float-card animate-fadeIn flex flex-col md:flex-row items-center gap-10">
+
+
+      <!-- Founder Photo + Name -->
+      <div class="flex flex-col items-center w-full md:w-1/3">
+        <div
+          class="relative w-44 h-44 rounded-full overflow-hidden border-4 border-indigo-400 shadow-2xl animate-founderGlow">
+          <img src="/static/ahmad.jpeg" class="w-full h-full object-cover object-top" />
+        </div>
+
+        <h3 class="text-2xl font-semibold text-indigo-300 mt-4 tracking-wide text-center whitespace-nowrap">
+          Ahmad Raza Khan
+        </h3>
+
+      </div>
+
+
+      <!-- About Text -->
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-bold text-indigo-300 mb-6">About AI Quiz Generator</h2>
+
+        <p class="text-white/90 mb-4 text-lg leading-relaxed">
+          The AI Quiz Generator automatically extracts text from your files and generates high-quality multiple-choice
+          questions with correct and incorrect options.
+        </p>
+        <p class="text-white/90 mb-4 text-lg leading-relaxed">
+          This project is designed by <b>Ahmad Raza Khan</b> with a focus on a modern UI, smooth animations, and a
+          learning-friendly experience.
+        </p>
+        <p class="text-white/90 text-lg leading-relaxed">
+          Our mission is to make learning interactive and easy using AI-powered tools.
+        </p>
+      </div>
+
     </div>
   </section>
 
- <!-- Footer -->
-<footer class="mt-20 text-center text-gray-400 py-6 border-t border-white/10">
-  <p>© 2025 AI Quiz Agent • Powered by Ahmad Raza Khan</p>
-</footer>
+
+  <!-- Footer -->
+  <footer class="mt-20 text-center text-gray-400 py-6 border-t border-white/10">
+    <p>© 2025 AI Quiz Agent • Powered by Ahmad Raza Khan</p>
+  </footer>
 </body>
+
 </html>
